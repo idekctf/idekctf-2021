@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: vanity-check-ii
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: false
+    image: us.gcr.io/idekctf/vanity-check-ii-healthcheck:411b6ffa42e5391f0d8552eb55b634adfde4818a11380e4704092575b49ada16
+  image: us.gcr.io/idekctf/vanity-check-ii-challenge:48676ac838db5cc0fe99a77f27459c676a5fffc2b566bb1f2f4e300b58b287ed

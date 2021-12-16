@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: stacknotes
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/stacknotes-healthcheck:c81a7205c7b6ebb5a4c537e2aa86830aeecb43f8a646eb7d67ab77b5a9a1208c
+  image: us.gcr.io/idekctf/stacknotes-challenge:3fc1f8695ffa015228932a78545cfb26a9ef16fe27f2afafe9783499cd09a33a

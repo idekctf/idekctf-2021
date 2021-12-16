@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: veeate
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/veeate-healthcheck:7e738c99f98a83b67daea244f5aea3be9f70cd109b10d16de2e0bc6c237a28ac
+  image: us.gcr.io/idekctf/veeate-challenge:00ff77e0ba100947ac2587d785fa6bec36da78e3a65d98225c8701506c25a04f
