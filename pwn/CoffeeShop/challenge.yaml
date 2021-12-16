@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: coffee-shop
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/coffee-shop-healthcheck:14555ec6310f3cb93921fee0b005c1895dc2b6d46789a962ffd128caf7b16829
+  image: us.gcr.io/idekctf/coffee-shop-challenge:1d6443f31eb589794c58d49718a28240c0b0b73b3e46a60b49f93bd70eadeae8

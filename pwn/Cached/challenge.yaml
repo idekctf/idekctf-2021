@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: cached
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/cached-healthcheck:b42325f0c14e6098c6888539df354ac06f9e400991c64b282dcb2b1e2dd15ad2
+  image: us.gcr.io/idekctf/cached-challenge:20c0a36a376e86461e410dba5827268e1329fe03c34b24f399f0988340b0e421

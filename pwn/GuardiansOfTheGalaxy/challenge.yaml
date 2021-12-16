@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: gotg
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/gotg-healthcheck:8502c9d23bb226a4e1771311fe54e948eed5386bc2d3411498722e0ecbd9ef5b
+  image: us.gcr.io/idekctf/gotg-challenge:e8c7916a5e700c83206917911b86455f7c00d3e9921bd6accb283e1370ad7837

@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: arithmetic-calculator
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/arithmetic-calculator-healthcheck:b762a7cc4a2b006609318228ae5044a8c1368fd79fb389bcee2f83b2e6f76715
+  image: us.gcr.io/idekctf/arithmetic-calculator-challenge:f760bce26d6c952e4223a9880c285e932d0d4646c3072c40a44b44af4d99d86e
