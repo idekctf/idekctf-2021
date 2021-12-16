@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: script-tank
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/script-tank-healthcheck:62e5d13c4e4830ec402b5956d0fbd076f4ccd163eb8cf80e47c893ec01dd4dab
+  image: us.gcr.io/idekctf/script-tank-challenge:bd533eda9fb78ae645ff2018b6b25e102fa0eb9f2b66dd06d0fc4d6ae0c54c7c

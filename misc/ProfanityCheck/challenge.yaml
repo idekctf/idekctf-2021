@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: profanity-check
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/profanity-check-healthcheck:33b6807745a2bad8fe8de20caf6b218abde30b4dadf3f34a54ae5980663282fb
+  image: us.gcr.io/idekctf/profanity-check-challenge:4b57722829fb9efa47d2bb26d61d596a7a02410caad66d8efb8d9c19817d3083
