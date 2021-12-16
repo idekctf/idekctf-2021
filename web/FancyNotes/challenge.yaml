@@ -1,0 +1,18 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: fancy-notes
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: "TCP"
+        port: 80
+        targetPort: 1337
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: false
+    image: us.gcr.io/idekctf/fancy-notes-healthcheck:620cbae9e128e875d2f46ac94998880a8e56b54eb7e0469b90007c25cf47ceb6
+  image: us.gcr.io/idekctf/fancy-notes-challenge:b723092f3be0a23b989c1e4033e35c04c68a94404661979ca78fa97d1eb6baed

@@ -1,0 +1,15 @@
+There are two ways to solve this challenge: 
+
+1. Using the total synthesis of cubane
+- The steps present in the total synthesis of cubane (can be found online) should be activated and would give the final product
+
+2. Doing the math
+- The final product can be obtained by determining which mathematical operations are used in which functions, and from finding the combination of functions that would result in the final answer
+
+Both methods require patching the binary using a tool such as radare2. All the functions were originally not activated (variables set to 0), all that needs to be done is to set the variables for the required functions to 1 to activate them to get the flag. 
+
+Functions required: 
+- NBS
+- Diels
+- SOCl2
+- Favorsky

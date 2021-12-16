@@ -1,0 +1,18 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: difference-check
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: "TCP"
+        port: 80
+        targetPort: 1337
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/difference-check-healthcheck:900fd7cbb9b19237f9c1d31787a586395c31804cc944a2214d0ec71d3dca4636
+  image: us.gcr.io/idekctf/difference-check-challenge:ebba1467251534b6040cba644f5f71ae3aaf833fa4bd79b99a47ac4b2c39a541

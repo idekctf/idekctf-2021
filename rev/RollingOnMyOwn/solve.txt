@@ -1,0 +1,2 @@
+Appends increments of the Fibbonacci Sequence onto each character of the input, modulo it with 96 and add 34
+Then compare that with a preset string (keygens using fib)

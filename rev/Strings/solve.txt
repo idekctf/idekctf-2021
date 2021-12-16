@@ -1,0 +1,3 @@
+The flag is a string split up into 7 separately initalized strings, lengths of 3 each except the last
+There is no call reference to the string but it can be found being pushed onto the stack right before the first printf
+To prevent skids from just using `strings` on the file, the lengths are all less than 4, the minimum string length that `strings` prints by default, though using `strings -3` would have found all the strings except the last (which could have been inferred)

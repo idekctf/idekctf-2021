@@ -1,0 +1,18 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: generic-pastebin-challenge
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: "TCP"
+        port: 80
+        targetPort: 1337
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/generic-pastebin-challenge-healthcheck:bfcd041da9f2034c31e3d92d861aca0ed9e074b7e6cc49fccab6cc328b99c819
+  image: us.gcr.io/idekctf/generic-pastebin-challenge-challenge:4bc08c62b12ad7f49c5110f3a8db71b916fbc73f64c9c1b8b24f4a54ea081bf4
