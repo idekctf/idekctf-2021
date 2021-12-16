@@ -1,0 +1,18 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: jinjail
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: "TCP"
+        port: 80
+        targetPort: 1337
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/jinjail-healthcheck:9cb9c5be3e198484f0e1354da4b37b9661dd64d382f9c0d64399a2653d64dce6
+  image: us.gcr.io/idekctf/jinjail-challenge:3ba0822911a4a71f69daa10ae3ad00a01fedb284f364971b73ad022c187f8c78

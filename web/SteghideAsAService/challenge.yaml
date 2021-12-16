@@ -1,0 +1,18 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: steghide-as-a-service
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: "TCP"
+        port: 80
+        targetPort: 1337
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf/steghide-as-a-service-healthcheck:a6ff7abf0ce427cc6b4b7c66c8cb2ab2e382ee43f1c57f5eb7031c114d224070
+  image: us.gcr.io/idekctf/steghide-as-a-service-challenge:fd5b47314b5c04883f9ab07aafdb6ed57b0d510c75832af105ac729608b29d8d
